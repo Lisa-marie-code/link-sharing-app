@@ -1,0 +1,14 @@
+header{
+  display: flex;
+  justify-content: space-around;
+}
+.logo{
+    object-fit: contain;
+}
+.link,.profile-details{
+border: none;
+padding: 11px 27px;
+}
+#profile{
+    margin: auto;
+}
