@@ -1,0 +1,9 @@
+.custom_div{
+    background-color: var(--header-background);
+    margin: 24px;
+   
+}
+.custom_div *{
+    background-color: var(--header-background);
+    
+}
