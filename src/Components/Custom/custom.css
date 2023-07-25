@@ -1,6 +1,7 @@
 .custom_div{
     background-color: var(--header-background);
-    margin: 24px;
+    margin-left: 24px;
+    padding: 40px;
    
 }
 .custom_div *{

@@ -1,10 +1,11 @@
 import React from "react";
+import './linknew.css'
 import { AiOutlinePlus } from "react-icons/ai";
 
 export const Linknew = () => {
   return (
     <div>
-      <button>
+      <button className="add-link">
         <AiOutlinePlus />
         Add new link
       </button>

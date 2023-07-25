@@ -1,6 +1,8 @@
 import React from "react";
 import { Linknew } from "../Linknew/linknew";
 import "./custom.css";
+import {Started} from "../Started/started"
+
 
 export const Custom = () => {
   return (
@@ -11,6 +13,7 @@ export const Custom = () => {
         world!
       </p>
       <Linknew />
+      <Started />
     </div>
   );
 };
