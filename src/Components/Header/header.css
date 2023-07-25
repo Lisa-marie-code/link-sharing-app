@@ -1,14 +1,43 @@
-header{
+:root {
+  --header-background: #fff;
+  --link-color: #633cff;
+  --link-active-background: #efebff;
+}
+
+header {
   display: flex;
   justify-content: space-around;
+  padding: 16px 16px 16px 24px;
+  border-radius: 12px;
+  background-color: var(--header-background);
+  margin: 24px;
+  
 }
-.logo{
-    object-fit: contain;
+header *{
+    font-weight: 600;
 }
-.link,.profile-details{
-border: none;
-padding: 11px 27px;
+.logo {
+  object-fit: contain;
+  background-color: var(--header-background);
 }
-#profile{
-    margin: auto;
+.link,
+.profile-details {
+  border: none;
+  padding: 11px 27px;
+  border-radius: 8px;
+  background-color: var(--header-background);
+}
+#profile {
+  margin: auto;
+}
+.link:active {
+  color: var(--link-color);
+  background-color: var(--link-active-background);
+}
+.preview {
+  border: 1px solid var(--link-color);
+  padding: 11px 27px;
+  border-radius: 8px;
+  background-color: var(--header-background);
+  color: var(--link-color);
 }
