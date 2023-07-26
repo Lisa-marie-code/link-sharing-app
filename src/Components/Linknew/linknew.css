@@ -1,6 +1,7 @@
 .add-link {
-  padding: 11px 307px;
+  padding: 11px 317px;
   border: 1px solid var(--link-color);
+  border-radius: 8px;
   color: var(--link-color);
   font-weight: 600;
 }

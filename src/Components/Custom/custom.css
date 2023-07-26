@@ -4,7 +4,8 @@
     padding: 40px;
    
 }
-.custom_div *{
-    background-color: var(--header-background);
+.custom_div p{
+  line-height: 48px;
+  padding-bottom: 40px;
     
 }
