@@ -4,4 +4,8 @@
   border-radius: 8px;
   color: var(--link-color);
   font-weight: 600;
+  background-color: var(--header-background);
+}
+.add-link:hover{
+  background-color: var(--link-active-background);
 }

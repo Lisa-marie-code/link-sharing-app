@@ -2,10 +2,14 @@
     background-color: var(--header-background);
     margin-left: 24px;
     padding: 40px;
+    border-radius: var(--background-border);
    
 }
 .custom_div p{
   line-height: 48px;
   padding-bottom: 40px;
     
+}
+.custom_div p,h1{
+    background-color: var(--header-background);
 }

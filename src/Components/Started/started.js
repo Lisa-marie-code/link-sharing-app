@@ -15,6 +15,13 @@ export const Started = () => {
           your profiles with everyone!
         </p>
       </div>
+      <hr></hr>
+      <div>
+      <button className="save-button">
+        Save
+      </button>
+
+      </div>
     </div>
   );
 };
