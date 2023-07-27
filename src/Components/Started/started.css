@@ -26,7 +26,6 @@ hr {
   border-radius: 8px;
   opacity: 0.25;
   margin: 24px 40px 24px 0;
-  float: right;
 }
 .save-button:hover {
   opacity: 0.5;
