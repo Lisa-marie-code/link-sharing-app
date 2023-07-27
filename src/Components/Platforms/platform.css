@@ -2,3 +2,21 @@
   display: flex;
   justify-content: space-between;
 }
+.filterdropdown,.inputLink{
+    display: flex;
+    flex-direction: column;
+    padding: 12px 0;
+  
+}
+
+.allLinkcover{
+    /* display: none; */
+   border: 1px solid red;
+   padding: 20px;
+   border-radius: 12px;
+}
+select,input{
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--link-border);
+}
