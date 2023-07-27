@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {FaGripLines,} from "react-icons/fa";
 import "./platform.css";
 
-const Platform = () => {
+export const Platform = ({ onRemove }) => {
   const platformlinks = ["Github", "Youtube", "Linkedin","Facebook","Hashnode", "Frontend Mentor"];
 
   const [selectedPlatform, setSelectedPlatform] = useState("");
@@ -10,6 +10,9 @@ const Platform = () => {
     setSelectedPlatform(event.target.value);
   };
 
+  const handleRemove = () =>{
+    onRemove();
+  }
 
 
   return (
@@ -19,7 +22,7 @@ const Platform = () => {
           {" "}
           <FaGripLines /> Link #1{" "}
         </span>
-        <span>Remove</span>
+        <span onClick={handleRemove}>Remove</span>
       </div>
       <div className="filterdropdown">
         <label htmlFor="platform">Platform:</label>
