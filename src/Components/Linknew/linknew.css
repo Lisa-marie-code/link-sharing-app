@@ -9,3 +9,6 @@
 .add-link:hover{
   background-color: var(--link-active-background);
 }
+.platform-new-link{
+  margin-top: 24px ;
+}

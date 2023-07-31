@@ -1,18 +1,21 @@
-import React,{useState} from "react";
-import './linknew.css'
-import {Platform} from "../Platforms/platform"
+import React, { useState } from "react";
+import "./linknew.css";
+import { Platform } from "../Platforms/platform";
 import { AiOutlinePlus } from "react-icons/ai";
+import { Started } from "../Started/started";
 
 export const Linknew = () => {
-  const [showPlatforms,setShowPlatforms] = useState([])
+  const [showPlatforms, setShowPlatforms] = useState([]);
+  const [showStarted, setShowStarted] = useState(true);
 
-const showLink = () => {
-setShowPlatforms([...showPlatforms, <Platform key={showPlatforms.length} />]);
-}
+  const showLink = () => {
+    setShowPlatforms([ ...showPlatforms,<Platform key={showPlatforms.length} />]);
+    setShowStarted(!showStarted);
+  };
 
-const handleRemovePlatform = (index) => {
-  setShowPlatforms((prevItems) => prevItems.filter((item, i) => i !== index));
-};
+  const handleRemovePlatform = (index) => {
+    setShowPlatforms((prevItems) => prevItems.filter((item, i) => i !== index));
+  };
 
   return (
     <div>
@@ -20,14 +23,15 @@ const handleRemovePlatform = (index) => {
         <AiOutlinePlus />
         Add new link
       </button>
-      {showPlatforms.map((showPlatform,index) => (
-        <div key={index}>
-         <Platform
+      {showPlatforms.map((showPlatform, index) => (
+        <div key={index} className="platform-new-link">
+          <Platform
             index={index}
             onRemove={() => handleRemovePlatform(index)}
           />
-      </div>
+        </div>
       ))}
+      <Started show={showStarted} toggleStarted={showLink} />
     </div>
   );
 };

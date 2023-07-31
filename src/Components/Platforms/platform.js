@@ -20,6 +20,7 @@ export const Platform = ({ onRemove, index}) => {
   const handleRemove = () => {
     console.log("remove platform");
     onRemove(index);
+    
   };
 
   return (
