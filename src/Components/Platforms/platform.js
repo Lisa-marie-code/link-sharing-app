@@ -1,26 +1,33 @@
 import React, { useState } from "react";
-import {FaGripLines,} from "react-icons/fa";
+import { FaGripLines } from "react-icons/fa";
 import "./platform.css";
 
-export const Platform = ({ onRemove }) => {
-  const platformlinks = ["Github", "Youtube", "Linkedin","Facebook","Hashnode", "Frontend Mentor"];
+export const Platform = ({ onRemove, index}) => {
+  const platformlinks = [
+    "Github",
+    "Youtube",
+    "Linkedin",
+    "Facebook",
+    "Hashnode",
+    "Frontend Mentor",
+  ];
 
   const [selectedPlatform, setSelectedPlatform] = useState("");
   const handlePlatformChange = (event) => {
     setSelectedPlatform(event.target.value);
   };
 
-  const handleRemove = () =>{
-    onRemove();
-  }
-
+  const handleRemove = () => {
+    console.log("remove platform");
+    onRemove(index);
+  };
 
   return (
-    <div className="allLinkcover" >
+    <div className="allLinkcover">
       <div className="link_number">
         <span>
           {" "}
-          <FaGripLines /> Link #1{" "}
+          <FaGripLines /> Link #{index + 1}{" "}
         </span>
         <span onClick={handleRemove}>Remove</span>
       </div>

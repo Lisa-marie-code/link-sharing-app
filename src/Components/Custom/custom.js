@@ -1,8 +1,7 @@
 import React from "react";
 import { Linknew } from "../Linknew/linknew";
 import "./custom.css";
-import {Started} from "../Started/started"
-import Platform from "../Platforms/platform";
+import { Started } from "../Started/started";
 
 
 export const Custom = () => {
@@ -15,7 +14,6 @@ export const Custom = () => {
       </p>
       <Linknew />
       <Started />
-      <Platform />
     </div>
   );
 };

@@ -10,7 +10,7 @@ const showLink = () => {
 setShowPlatforms([...showPlatforms, <Platform key={showPlatforms.length} />]);
 }
 
-const handleRemove = (index) => {
+const handleRemovePlatform = (index) => {
   setShowPlatforms((prevItems) => prevItems.filter((item, i) => i !== index));
 };
 
@@ -22,7 +22,10 @@ const handleRemove = (index) => {
       </button>
       {showPlatforms.map((showPlatform,index) => (
         <div key={index}>
-        {showPlatform}
+         <Platform
+            index={index}
+            onRemove={() => handleRemovePlatform(index)}
+          />
       </div>
       ))}
     </div>
