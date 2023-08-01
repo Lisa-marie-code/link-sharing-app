@@ -19,3 +19,6 @@ select,input{
     border-radius: 8px;
     border: 1px solid var(--link-border);
 }
+.has-error{
+  border: 10px solid red;
+}

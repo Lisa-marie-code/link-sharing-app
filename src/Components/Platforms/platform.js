@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import { FaGripLines } from "react-icons/fa";
 import "./platform.css";
 
-export const Platform = ({ onRemove, index}) => {
+export const Platform = ({ onRemove, index }) => {
+  const [inputValue, setInputValue] = useState("");
+  const [saveError, setSaveError] = useState("");
+
   const platformlinks = [
     "Github",
     "Youtube",
@@ -20,13 +23,21 @@ export const Platform = ({ onRemove, index}) => {
   const handleRemove = () => {
     console.log("remove platform");
     onRemove(index);
-    
+  };
+  const handleSave = (e) => {
+    e.preventDefault();
+    if (inputValue.trim() === "") {
+      setSaveError(true);
+    }else{
+      setSaveError(false);
+    }
+    console.log('checking input value');
   };
 
   return (
     <div className="allLinkcover">
       <div className="link_number">
-        <span>
+        <span onClick ={handleSave}>
           {" "}
           <FaGripLines /> Link #{index + 1}{" "}
         </span>
@@ -48,7 +59,13 @@ export const Platform = ({ onRemove, index}) => {
       </div>
       <div className="inputLink">
         Link
-        <input placeholder="e.g. https://www.github.com/johnappleseed"></input>
+        <input
+          value={inputValue}
+          className={`${saveError ? "has-error" : ""}`}
+          type="text"
+          placeholder="e.g. https://www.github.com/johnappleseed"
+          onChange={(e) => setInputValue(e.target.value)}
+        />
       </div>
     </div>
   );

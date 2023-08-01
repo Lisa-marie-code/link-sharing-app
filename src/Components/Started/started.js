@@ -17,9 +17,7 @@ export const Started = ({show,toggleStarted}) => {
       </div>
       <hr></hr>
       <div>
-      <button className="save-button">
-        Save
-      </button>
+   
 
       </div>
     </div>
