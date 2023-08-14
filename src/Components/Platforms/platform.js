@@ -27,7 +27,7 @@ export const Platform = ({ onRemove, index }) => {
   const handleSave = (e) => {
     e.preventDefault();
     if (inputValue.trim() === "") {
-      setSaveError(true);
+      setSaveError('Invalid link');
     }else{
       setSaveError(false);
     }
@@ -66,6 +66,7 @@ export const Platform = ({ onRemove, index }) => {
           placeholder="e.g. https://www.github.com/johnappleseed"
           onChange={(e) => setInputValue(e.target.value)}
         />
+        {saveError}
       </div>
     </div>
   );

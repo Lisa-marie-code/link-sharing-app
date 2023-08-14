@@ -10,7 +10,7 @@
 }
 
 .allLinkcover{
-   border: 1px solid red;
+   border: 1px solid rgb(148, 190, 40);
    padding: 20px;
    border-radius: 12px;
 }
@@ -20,5 +20,17 @@ select,input{
     border: 1px solid var(--link-border);
 }
 .has-error{
-  border: 10px solid red;
+  border: 1px solid red;
+}
+.inputLink{
+  position: relative;
+}
+.inputLink input.has-error::after{
+  content: "Invalid link";
+  color: red;
+  font-size: 12px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 4px;
 }

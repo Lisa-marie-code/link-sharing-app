@@ -3,7 +3,7 @@ import "./started.css";
 import { Point } from "../Started/pointhand";
 import hand from "../../images/humanPoint.svg";
 
-export const Started = ({show,toggleStarted}) => {
+export const Started = ({show}) => {
   return show ? (
     <div >
       <div className="started-text" >

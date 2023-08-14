@@ -6,11 +6,11 @@ import { Started } from "../Started/started";
 
 export const Linknew = () => {
   const [showPlatforms, setShowPlatforms] = useState([]);
-  const [showStarted, setShowStarted] = useState(true);
+
 
   const showLink = () => {
     setShowPlatforms([ ...showPlatforms,<Platform key={showPlatforms.length} />]);
-    setShowStarted(!showStarted);
+    
   };
 
   const handleRemovePlatform = (index) => {
@@ -31,7 +31,7 @@ export const Linknew = () => {
           />
         </div>
       ))}
-      <Started show={showStarted} toggleStarted={showLink} />
+     {showPlatforms.length === 0 && <Started show={true} toggleStarted={() => {}} />}
     </div>
   );
 };
