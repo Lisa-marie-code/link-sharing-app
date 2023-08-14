@@ -3,6 +3,7 @@ import { Linknew } from "../Linknew/linknew";
 import "./custom.css";
 import { Started } from "../Started/started";
 import {Save} from "../Save/save";
+import { Profile } from "../Profiles/profile";
 
 
 export const Custom = () => {
@@ -16,6 +17,7 @@ export const Custom = () => {
       <Linknew />
       <Started />
       <Save />
+      <Profile />
     </div>
   );
 };
