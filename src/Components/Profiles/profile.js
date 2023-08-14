@@ -9,7 +9,7 @@ export const Profile = () => {
       <p>Add your details to create a personal touch to your profile.</p>
       <div className="upload_pic">
         <p>Profile picture</p>
-        <div>
+        <div className="image">
           <AiOutlinePicture />
           <AiOutlinePlus />Upload Image
         </div>

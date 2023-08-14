@@ -1,8 +1,15 @@
-.upload_pic{
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-  
+.upload_pic {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  border: 1px solid goldenrod;
 }
-.upload_pic p{
-    font-size: 12px;
+.upload_pic p {
+  font-size: 12px;
+}
+.image{
+   display: flex;
+   flex-direction: column; 
+   background-color: var( --link-active-background);
+   color: var(--link-color);
+   font-weight: 600;
 }
