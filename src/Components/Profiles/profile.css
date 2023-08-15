@@ -1,15 +1,44 @@
 .upload_pic {
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-columns: 1fr 0.8fr 0.9fr;
   border: 1px solid goldenrod;
+  padding: 20px;
 }
 .upload_pic p {
   font-size: 12px;
 }
-.image{
-   display: flex;
-   flex-direction: column; 
-   background-color: var( --link-active-background);
-   color: var(--link-color);
-   font-weight: 600;
+.image {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--link-active-background);
+  color: var(--link-color);
+  font-weight: 600;
+  align-items: center;
+  padding: 31px 0px 30px 0px;
+  border-radius: 12px;
+}
+.picture {
+  width: 40px;
+  height: 40px;
+}
+.caution {
+  padding-left: 24px;
+}
+.formCover{
+  padding: 20px;
+  border: 1px solid blue;
+  margin-top: 24px;
+
+}
+.form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+input{
+  width: 450px;
+}
+label {
+  padding-right: 5px;
+  width: 240px;
 }
