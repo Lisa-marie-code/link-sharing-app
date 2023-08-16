@@ -3,9 +3,12 @@
   grid-template-columns: 1fr 0.8fr 0.9fr;
   border: 1px solid goldenrod;
   padding: 20px;
+  border-radius: var(--background-border);
 }
 .upload_pic p {
   font-size: 12px;
+  background-color: var(--mini-background);
+  line-height: 20px;
 }
 .image {
   display: flex;
@@ -20,6 +23,10 @@
 .picture {
   width: 40px;
   height: 40px;
+  background-color: var(--link-active-background);
+}
+.plus{
+  background-color: var(--link-active-background); 
 }
 .caution {
   padding-left: 24px;
@@ -28,15 +35,16 @@
   padding: 20px;
   border: 1px solid blue;
   margin-top: 24px;
-
+  border-radius: var(--background-border);
 }
 .form-group {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-input{
+.form-group input{
   width: 450px;
+  margin: 5px;
 }
 label {
   padding-right: 5px;

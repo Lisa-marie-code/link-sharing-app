@@ -5,7 +5,7 @@ export const Save = () => {
 
 
   return (
-    <div>
+    <div className="saveCover">
       <button  className="save-button">Save</button>
     </div>
   );

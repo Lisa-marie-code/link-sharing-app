@@ -6,6 +6,13 @@
     border-radius: 8px;
     opacity: 0.25;
     margin: 24px 40px 24px 0;
+    /* right: 0;
+    position: absolute; */
+   
+  }
+  .saveCover{
+    display: flex;
+    justify-content: flex-end;
   }
   .save-button:hover {
     opacity: 0.5;
