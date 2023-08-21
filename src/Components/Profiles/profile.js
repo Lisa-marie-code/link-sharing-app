@@ -1,19 +1,20 @@
 import React, { useRef, useState } from "react";
 import "./profile.css";
 import { Save } from "../Save/save";
-import { AiOutlinePicture, AiOutlinePlus } from "react-icons/ai";
+import upload from "../../images/uploadImg.png";
 
 export const Profile = () => {
   const inputRef = useRef(null);
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState(null);
 
   const handleImageClick = () => {
     inputRef.current.click();
   };
   const handleImageChange = (event) => {
-    const file = event.target.files[0]
+    const file = event.target.files[0];
     console.log(file);
     setImage(file);
+    console.log(image);
   };
 
   return (
@@ -23,10 +24,11 @@ export const Profile = () => {
       <div className="upload_pic">
         <p className="profile-text">Profile picture</p>
         <div className="image" onClick={handleImageClick}>
-          <AiOutlinePicture className="picture" />
-          <AiOutlinePlus className="plus" />
-          Upload Image
-          {image ? <img src={URL.createObjectURL(image)} alt=""/> : image}
+          {image ? (
+            <img src={URL.createObjectURL(image)} alt="Profile" className="img-after" />
+          ) : (
+            <img src={upload} alt="uploadImg" className="img-before"/>
+          )}
           <input
             type="file"
             onChange={handleImageChange}

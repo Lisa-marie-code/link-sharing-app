@@ -10,20 +10,22 @@
   background-color: var(--mini-background);
   line-height: 20px;
 }
-.image {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--link-active-background);
-  color: var(--link-color);
-  font-weight: 600;
-  align-items: center;
-  padding: 31px 0px 30px 0px;
-  border-radius: 12px;
-}
 .picture {
   width: 40px;
   height: 40px;
   background-color: var(--link-active-background);
+}
+.img-before{
+  width: 193px;
+  height: 193px;
+}
+.img-after{
+  width: 193px;
+  height: 193px;
+  object-fit: cover;
+}
+.display-after{
+  width: .8fr;
 }
 .plus{
   background-color: var(--link-active-background); 
