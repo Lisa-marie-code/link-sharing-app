@@ -1,4 +1,5 @@
 import React from "react";
+import { Route, Routes} from "react-router-dom";
 import { Linknew } from "../Linknew/linknew";
 import "./custom.css";
 import { Started } from "../Started/started";
@@ -17,7 +18,10 @@ export const Custom = () => {
       <Linknew />
       <Started />
       <Save />
-      <Profile />
+      <Routes>
+      <Route path="/profile" element={<Profile/>} />
+      </Routes>
+      
     </div>
   );
 };

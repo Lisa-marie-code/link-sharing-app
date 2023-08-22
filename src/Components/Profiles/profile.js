@@ -14,7 +14,6 @@ export const Profile = () => {
     const file = event.target.files[0];
     console.log(file);
     setImage(file);
-    console.log(image);
   };
 
   return (
@@ -23,11 +22,11 @@ export const Profile = () => {
       <p>Add your details to create a personal touch to your profile.</p>
       <div className="upload_pic">
         <p className="profile-text">Profile picture</p>
-        <div className="image" onClick={handleImageClick}>
+        <div className="image-container" onClick={handleImageClick}>
           {image ? (
             <img src={URL.createObjectURL(image)} alt="Profile" className="img-after" />
           ) : (
-            <img src={upload} alt="uploadImg" className="img-before"/>
+            <img src={upload} alt="uploadImg"/>
           )}
           <input
             type="file"
@@ -36,6 +35,7 @@ export const Profile = () => {
             style={{ display: "none" }}
           />
         </div>
+        <div className="hover-text">Change image</div>
         <p className="caution">
           Image must be below 1024x1024px. Use PNG or JPG format.
         </p>
@@ -56,8 +56,8 @@ export const Profile = () => {
         <div className="form-group">
           <label for="first-name">Email</label>
           <input
-            id="first-name"
-            name="first-name"
+            id="email"
+            name="email"
             placeholder="e.g. email@example.com"
           />
         </div>
