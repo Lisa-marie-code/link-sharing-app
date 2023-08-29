@@ -12,11 +12,13 @@ export const Header = () => {
       <header className="dev-link">
         <Logo img={dev} className="logo" />
         <div id="profile">
+          <Link to="/">
           <button className="link">
             <BiLink className="file-icon" />
             Links
           </button>
-          <Link to={"/profile"}>
+          </Link>
+          <Link to="/profile">
             <button className="profile-details">
               <CgProfile className="name-icon" />
               Profile Details

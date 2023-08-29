@@ -3,10 +3,10 @@ import "./started.css";
 import { Point } from "../Started/pointhand";
 import hand from "../../images/humanPoint.svg";
 
-export const Started = ({show}) => {
+export const Started = ({ show }) => {
   return show ? (
-    <div >
-      <div className="started-text" >
+    <div>
+      <div className="started-text">
         <Point img={hand} />
         <h2>Let's get you started</h2>
         <p id="description">
@@ -18,7 +18,6 @@ export const Started = ({show}) => {
       <hr></hr>
       <div>
    
-
       </div>
     </div>
   ) : null;

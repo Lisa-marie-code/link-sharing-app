@@ -24,20 +24,25 @@ export const Platform = ({ onRemove, index }) => {
     console.log("remove platform");
     onRemove(index);
   };
+
+
+  
   const handleSave = (e) => {
     e.preventDefault();
+    console.log(inputValue);
     if (inputValue.trim() === "") {
-      setSaveError('Invalid link');
-    }else{
+      setSaveError("Invalid link");
+    } else {
       setSaveError(false);
     }
-    console.log('checking input value');
+    console.log("checking input value");
   };
+ 
 
   return (
     <div className="allLinkcover">
       <div className="link_number">
-        <span onClick ={handleSave}>
+        <span onClick={handleSave}>
           {" "}
           <FaGripLines /> Link #{index + 1}{" "}
         </span>
@@ -66,7 +71,7 @@ export const Platform = ({ onRemove, index }) => {
           placeholder="e.g. https://www.github.com/johnappleseed"
           onChange={(e) => setInputValue(e.target.value)}
         />
-        {saveError}
+      {saveError && <div className="error-message">{saveError}</div>}
       </div>
     </div>
   );
