@@ -19,3 +19,13 @@
     padding: 11px 259px;
   }
 }
+
+
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .add-link{
+    padding: 11px 98px;
+   
+  }
+
+}

@@ -78,3 +78,24 @@ label {
 .image-container:hover .hover-text {
   opacity: 1;
 }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .upload_pic {
+    display: block;
+   
+  }
+  p.caution {
+  padding: 0;
+  }
+  .form-group {
+    display: block;
+   
+  }
+  .form-group input {
+    width: 255px;
+    margin: 5px;
+  }
+  .hover-text{
+    display: none;
+  }
+}

@@ -1,22 +1,30 @@
-.custom_div{
-    background-color: var(--header-background);
-    margin-left: 24px;
-    padding: 40px;
-    border-radius: var(--background-border);
-   
+.custom_div {
+  background-color: var(--header-background);
+  margin-left: 24px;
+  padding: 40px;
+  border-radius: var(--background-border);
 }
-.custom_div p{
+.custom_div p {
   line-height: 48px;
   padding-bottom: 40px;
-    
 }
-.custom_div p,h1{
-    background-color: var(--header-background);
+.custom_div p,
+h1 {
+  background-color: var(--header-background);
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
+  .custom_div {
+    margin: 0;
+  }
+}
 
-  .custom_div{
-    margin:0;
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .custom_div h1{
+   font-size: 24px;
+   padding-bottom: 10px;
+  }
+  .custom_div p{
+   line-height: 20px;
   }
 }

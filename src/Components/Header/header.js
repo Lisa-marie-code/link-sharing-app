@@ -19,15 +19,15 @@ export const Header = () => {
           <Link to="/">
           <button  className="link"
 >
-            <BiLink className="file-icon" />
-            Links
+            <BiLink className="file-icon " />
+         <span>  Links</span>
           </button>
           </Link>
           <Link to="/profile">
             <button className="profile-details"
        >
               <CgProfile className="name-icon" />
-              Profile Details
+              <span>Profile Details</span>
             </button>
           </Link>
         </div>

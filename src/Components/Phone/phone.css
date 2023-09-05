@@ -12,6 +12,13 @@
   background-color: var(--header-background);
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
+  
+  .coverPhone {
+   display: none;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
   .coverPhone {
    display: none;
   }

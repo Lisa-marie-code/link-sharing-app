@@ -19,3 +19,10 @@
     display: block;
   }
 }
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .grid-section .custom_div {
+    width: 343px;
+    padding: 24px;
+    margin: 0;
+  }
+}

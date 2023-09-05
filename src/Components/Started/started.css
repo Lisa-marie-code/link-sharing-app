@@ -19,3 +19,11 @@ hr {
   margin-top: 41px;
   color: #d9d9d9;
 }
+
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+  #description {
+   width:255px;
+  }
+}
