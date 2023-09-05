@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Landing } from "./Landing";
-import { Profile } from "./Components/Profiles/profile";
+import { Display } from "./Components/Display/display";
 import { SaveContext } from "./Components/Save/savecontext";
 
 const App = () => {
@@ -33,7 +33,7 @@ const App = () => {
       <SaveContext.Provider value={value}>
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile" element={<Display />} />
         </Routes>
       </SaveContext.Provider>
     </div>

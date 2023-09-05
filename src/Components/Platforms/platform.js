@@ -26,23 +26,10 @@ export const Platform = ({ onRemove, index }) => {
   };
 
 
-  
-  const handleSave = (e) => {
-    e.preventDefault();
-    console.log(inputValue);
-    if (inputValue.trim() === "") {
-      setSaveError("Invalid link");
-    } else {
-      setSaveError(false);
-    }
-    console.log("checking input value");
-  };
- 
-
   return (
     <div className="allLinkcover">
       <div className="link_number">
-        <span onClick={handleSave}>
+        <span >
           {" "}
           <FaGripLines /> Link #{index + 1}{" "}
         </span>
