@@ -30,13 +30,20 @@ header *{
   border-radius: 8px;
   background-color: var(--header-background);
 }
-#profile {
-  margin: auto;
-}
-.link,.profile-details:active {
+.active {
   color: var(--link-color);
   background-color: var(--link-active-background);
 }
+
+#profile {
+  margin: auto;
+}
+.link:active,
+.profile-details:active {
+  color: var(--link-color);
+  background-color: var(--link-active-background);
+}
+
 .profile-details:hover{
   color: var(--link-color);
 }
@@ -50,3 +57,4 @@ header *{
 .preview:hover{
   background-color: var(--link-active-background);
 }
+

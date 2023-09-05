@@ -11,3 +11,8 @@
   max-height: 100%;
   background-color: var(--header-background);
 }
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .coverPhone {
+   display: none;
+  }
+}

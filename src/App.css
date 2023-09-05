@@ -4,11 +4,18 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Instrument Sans', sans-serif;
-  background-color: #FAFAFA;
+  font-family: "Instrument Sans", sans-serif;
+  background-color: #fafafa;
 }
-.grid-section{
-    display: grid;
-    grid-template-columns: 40% 60%;
-    margin: 24px;
+.grid-section {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  margin: 24px;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+  .grid-section {
+    display: block;
+  }
 }

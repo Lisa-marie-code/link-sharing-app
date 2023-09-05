@@ -12,3 +12,10 @@
 .platform-new-link{
   margin-top: 24px ;
 }
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+  .add-link{
+    padding: 11px 259px;
+  }
+}

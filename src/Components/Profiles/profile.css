@@ -9,7 +9,6 @@
 .upload_pic {
   display: grid;
   grid-template-columns: 1fr 0.8fr 0.9fr;
-  border: 1px solid goldenrod;
   padding: 20px;
   border-radius: var(--background-border);
 }
@@ -44,7 +43,6 @@
 }
 .formCover {
   padding: 20px;
-  border: 1px solid blue;
   margin-top: 24px;
   border-radius: var(--background-border);
 }

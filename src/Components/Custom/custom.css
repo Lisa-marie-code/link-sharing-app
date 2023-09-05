@@ -13,3 +13,10 @@
 .custom_div p,h1{
     background-color: var(--header-background);
 }
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+  .custom_div{
+    margin:0;
+  }
+}

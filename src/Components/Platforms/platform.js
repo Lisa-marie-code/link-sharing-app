@@ -36,7 +36,7 @@ export const Platform = ({ onRemove, index }) => {
         <span onClick={handleRemove}>Remove</span>
       </div>
       <div className="filterdropdown">
-        <label htmlFor="platform">Platform:</label>
+        <label htmlFor="platform">Platform</label>
         <select
           id="platform"
           value={selectedPlatform}

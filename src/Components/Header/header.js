@@ -7,19 +7,25 @@ import "./header.css";
 import dev from "../../images/logo.png";
 
 export const Header = () => {
+
+
+
+
   return (
     <div>
       <header className="dev-link">
         <Logo img={dev} className="logo" />
         <div id="profile">
           <Link to="/">
-          <button className="link">
+          <button  className="link"
+>
             <BiLink className="file-icon" />
             Links
           </button>
           </Link>
           <Link to="/profile">
-            <button className="profile-details">
+            <button className="profile-details"
+       >
               <CgProfile className="name-icon" />
               Profile Details
             </button>
