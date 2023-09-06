@@ -18,6 +18,9 @@
   .grid-section {
     display: block;
   }
+  .grid-section .custom_div {
+    margin: 0;
+  }
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .grid-section .custom_div {
