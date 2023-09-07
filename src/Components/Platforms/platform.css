@@ -26,11 +26,14 @@ select,input{
   position: relative;
 }
 .inputLink input.has-error::after{
-  content: "Invalid link";
+  content: "Can't be empty 1";
   color: red;
   font-size: 12px;
   position: absolute;
   top: 100%;
   left: 0;
   margin-top: 4px;
+}
+.error-message{
+  color: red;
 }

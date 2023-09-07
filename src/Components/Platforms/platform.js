@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState,useContext} from "react";
 import { FaGripLines } from "react-icons/fa";
+import { SaveContext } from "../../Components/Save/savecontext";
 import "./platform.css";
 
 export const Platform = ({ onRemove, index }) => {
-  const [inputValue, setInputValue] = useState("");
-  const [saveError, setSaveError] = useState("");
+  
+
+  const { inputValue, setInputValue, saveError } = useContext(SaveContext);
 
   const platformlinks = [
     "Github",
@@ -23,6 +25,7 @@ export const Platform = ({ onRemove, index }) => {
   const handleRemove = () => {
     console.log("remove platform");
     onRemove(index);
+  
   };
 
 

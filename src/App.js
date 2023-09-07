@@ -12,14 +12,13 @@ const App = () => {
     e.preventDefault();
     console.log(inputValue);
     if (inputValue.trim() === "") {
-      setSaveError("Invalid link");
+      setSaveError("Can't be empty");
     } else {
       setSaveError(false);
     }
     console.log("checking input value");
   };
 
-  
   const value = {
     inputValue,
     setInputValue,
