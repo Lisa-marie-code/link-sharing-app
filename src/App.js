@@ -19,12 +19,15 @@ const App = () => {
     console.log("checking input value");
   };
 
+ 
+
   const value = {
     inputValue,
     setInputValue,
     saveError,
     setSaveError,
     handleSave,
+  
   };
 
   return (

@@ -1,14 +1,19 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useContext } from "react";
 import "./profile.css";
 import upload from "../../images/uploadImg.png";
 import { Save } from "../Save/save";
+import { SaveContext } from "../../Components/Save/savecontext";
 
 export const Profile = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+
   const inputRef = useRef(null);
   const [image, setImage] = useState(null);
 
+  const { saveError, setSaveError } = useContext(SaveContext);
   const handleImageClick = () => {
-    inputRef.current.click();
+    inputRef.current.click()
   };
   const handleImageChange = (event) => {
     const file = event.target.files[0];
@@ -48,7 +53,16 @@ export const Profile = () => {
         <div className="formCover">
           <div className="form-group">
             <label htmlFor="first-name">First Name*</label>
-            <input id="first-name" name="first-name" placeholder="e.g. John" />
+            <input
+              id="first-name"
+              name="first-name"
+              placeholder="e.g. John"
+              value={firstName}
+              onChange={(e) => {
+                setFirstName(e.target.value);
+                setSaveError("");
+              }}
+            />
           </div>
           <div className="form-group">
             <label htmlFor="last-name">Last Name*</label>
@@ -56,6 +70,11 @@ export const Profile = () => {
               id="last-name"
               name="last-name"
               placeholder="e.g. Appleseed"
+              value={lastName}
+              onChange={(e) => {
+                setLastName(e.target.value);
+                setSaveError("");
+              }}
             />
           </div>
           <div className="form-group">
@@ -67,10 +86,10 @@ export const Profile = () => {
             />
           </div>
         </div>
+        {saveError && <p className="error-message">{saveError}</p>}
         <hr></hr>
-        <Save />
+        <Save  />
       </div>
-    
     </div>
   );
 };
