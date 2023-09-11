@@ -11,19 +11,15 @@ import minipreview from "../../images/ph_eye-bold.svg";
 export const Header = () => {
   const [isMobileView, setIsMobileView] = useState(false);
 
-  // Function to update isMobileView based on screen width
+ 
   const updateIsMobileView = () => {
-    setIsMobileView(window.innerWidth <= 768); // You can adjust the breakpoint as needed
+    setIsMobileView(window.innerWidth <= 480); 
   };
 
   useEffect(() => {
-    // Add an event listener to update isMobileView when the window is resized
     window.addEventListener("resize", updateIsMobileView);
-
-    // Initial check of screen width
     updateIsMobileView();
 
-    // Remove the event listener when the component unmounts
     return () => {
       window.removeEventListener("resize", updateIsMobileView);
     };
@@ -33,10 +29,8 @@ export const Header = () => {
     <div>
       <header className="dev-link">
         {isMobileView ? (
-          // Show Moblogo in mobile view
           <Moblogo img={minilogo} className="minilogo" />
         ) : (
-          // Show Logo in non-mobile view
           <Logo img={dev} className="logo" />
         )}
         <div id="profile">
@@ -54,7 +48,7 @@ export const Header = () => {
           </Link>
         </div>
         <button className="preview">Preview</button>
-        <Mobpreview img={minipreview} id="minipreview"/>
+        {isMobileView && <Mobpreview img={minipreview} id="minipreview" />}
       </header>
     </div>
   );
