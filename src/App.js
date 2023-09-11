@@ -7,6 +7,7 @@ import { SaveContext } from "./Components/Save/savecontext";
 const App = () => {
   const [inputValue, setInputValue] = useState("");
   const [saveError, setSaveError] = useState("");
+  const [selectedPlatform, setSelectedPlatform] = useState("Github");
 
   const handleSave = (e) => {
     e.preventDefault();
@@ -17,6 +18,7 @@ const App = () => {
       setSaveError(false);
     }
     console.log("checking input value");
+    setInputValue("");
   };
 
  
@@ -27,7 +29,8 @@ const App = () => {
     saveError,
     setSaveError,
     handleSave,
-  
+  selectedPlatform,
+  setSelectedPlatform
   };
 
   return (

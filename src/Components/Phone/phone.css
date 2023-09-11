@@ -1,6 +1,7 @@
 .coverPhone {
   background-color: var(--header-background);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius:var(--background-border);

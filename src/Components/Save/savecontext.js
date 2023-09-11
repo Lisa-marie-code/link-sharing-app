@@ -7,6 +7,8 @@ export const SaveContext = createContext({
   setInputValue: () => {},
   saveError: "",
   setSaveError: () => {},
+  selectedPlatform: "",
+  setSelectedPlatform: () => {},
   handleSave: () => {},
 });
 
