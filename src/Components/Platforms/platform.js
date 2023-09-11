@@ -6,7 +6,7 @@ import "./platform.css";
 export const Platform = ({ onRemove, index }) => {
   
 
-  const { inputValue, setInputValue, saveError } = useContext(SaveContext);
+  const { inputValue, setInputValue, saveError, setSaveError } = useContext(SaveContext); // i aded setSaveError
 
   const platformlinks = [
     "Github",
@@ -17,17 +17,28 @@ export const Platform = ({ onRemove, index }) => {
     "Frontend Mentor",
   ];
 
-  const [selectedPlatform, setSelectedPlatform] = useState("");
+  const [selectedPlatform, setSelectedPlatform] = useState("Github"); // set the default platform to Github
   const handlePlatformChange = (event) => {
     setSelectedPlatform(event.target.value);
+    validateURL(inputValue,event.target.value); // validate input value when the platform changes
   };
 
   const handleRemove = () => {
-    console.log("remove platform");
     onRemove(index);
-  
   };
 
+
+  //function handle for the validation
+  function validateURL(inputValue, serviceName) {
+    const urlPattern = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/; //regulation expression for checking if is a url
+    const formattedText = serviceName.toLowerCase().replace(/\s+/g, ""); // using the platform to check the type of link so formated to remove withspace and to lowercase
+    if (!urlPattern.test(inputValue) || !inputValue.includes(formattedText)) { 
+      setSaveError(`Input is not a valid ${serviceName} URL`); // if is not a link or the link is not for that platform we set the error message
+    }else{
+      setSaveError(null); // else set it to null
+    }
+    setInputValue(inputValue) // the input value will always go through even if the input value is not valid
+  }
 
   return (
     <div className="allLinkcover">
@@ -59,7 +70,7 @@ export const Platform = ({ onRemove, index }) => {
           className={`${saveError ? "has-error" : ""}`}
           type="text"
           placeholder="e.g. https://www.github.com/johnappleseed"
-          onChange={(e) => setInputValue(e.target.value)}
+          onChange={(e) => validateURL(e.target.value,selectedPlatform)} // changed to do the validation before is set to inputValue
         />
       {saveError && <div className="error-message">{saveError}</div>}
       </div>
