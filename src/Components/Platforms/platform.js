@@ -1,12 +1,9 @@
-import React, { useState,useContext} from "react";
+import React, {useState} from "react";
 import { FaGripLines } from "react-icons/fa";
-import { SaveContext } from "../../Components/Save/savecontext";
 import "./platform.css";
 
-export const Platform = ({ onRemove, index }) => {
-  
-
-  const { inputValue, setInputValue, saveError, setSaveError } = useContext(SaveContext); // i aded setSaveError
+export const Platform = ({setInputValue,data, onRemove, index }) => {
+  const [saveError, setSaveError] = useState("");
 
   const platformlinks = [
     "Github",
@@ -16,15 +13,18 @@ export const Platform = ({ onRemove, index }) => {
     "Hashnode",
     "Frontend Mentor",
   ];
-
-  const [selectedPlatform, setSelectedPlatform] = useState("Github"); // set the default platform to Github
   const handlePlatformChange = (event) => {
-    setSelectedPlatform(event.target.value);
-    validateURL(inputValue,event.target.value); // validate input value when the platform changes
+    validateURL(data.link,event.target.value); // validate input value when the platform changes
+    setInputValue(index,event.target.value,"platform")
   };
 
   const handleRemove = () => {
     onRemove(index);
+  };
+
+  const handleLinkChange = (event) => {
+    validateURL(event.target.value,data.platform); // validate input value when the platform changes
+    setInputValue(index,event.target.value,"link")
   };
 
 
@@ -37,7 +37,6 @@ export const Platform = ({ onRemove, index }) => {
     }else{
       setSaveError(null); // else set it to null
     }
-    setInputValue(inputValue) // the input value will always go through even if the input value is not valid
   }
 
   return (
@@ -53,7 +52,7 @@ export const Platform = ({ onRemove, index }) => {
         <label htmlFor="platform">Platform</label>
         <select
           id="platform"
-          value={selectedPlatform}
+          value={data.platform}
           onChange={handlePlatformChange}
         >
           {platformlinks.map((platform) => (
@@ -66,16 +65,16 @@ export const Platform = ({ onRemove, index }) => {
       <div className="inputLink">
         Link
         <input
-          value={inputValue}
-          className={`${saveError ? "has-error" : ""}`}
+          value={data.link}
+          className={`${saveError && data.link ? "has-error" : ""}`}
           type="text"
           placeholder="e.g. https://www.github.com/johnappleseed"
-          onChange={(e) => validateURL(e.target.value,selectedPlatform)} // changed to do the validation before is set to inputValue
-        />
-      {saveError && <div className="error-message">{saveError}</div>}
+          onChange={handleLinkChange} 
+        /> 
+      {data.link && saveError && <div className="error-message">{saveError}</div>}
       </div>
     </div>
   );
 };
 
-export default Platform;
+export default React.memo(Platform);

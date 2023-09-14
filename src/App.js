@@ -4,7 +4,7 @@ import { Landing } from "./Landing";
 import { Display } from "./Components/Display/display";
 import { SaveContext } from "./Components/Save/savecontext";
 
-const App = () => {
+const App = ({showLink}) => {
   const [inputValue, setInputValue] = useState("");
   const [saveError, setSaveError] = useState("");
   const [selectedPlatform, setSelectedPlatform] = useState("Github");

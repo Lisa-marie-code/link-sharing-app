@@ -1,15 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./content.css";
 import { FaArrowRight } from "react-icons/fa";
-import { SaveContext } from "../../Components/Save/savecontext";
 
-export const Content = () => {
-  const { selectedPlatform } = useContext(SaveContext);
-
+export const Content = ({value}) => {
   return (
-    <div>
+    <div className="pb-20">
       <section className="content_div">
-      <p>{selectedPlatform}</p>
+      <p>{value?.platform}</p>
         <FaArrowRight className="arrow" />
       </section>
     </div>

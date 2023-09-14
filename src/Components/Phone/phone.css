@@ -12,6 +12,27 @@
   max-height: 100%;
   background-color: var(--header-background);
 }
+.background-color{
+  background-color: transparent !important;
+}
+.position-absolute{
+  position: absolute;
+}
+
+.position-relative{
+  position: relative;
+}
+
+.top-20{
+  top: 279px;
+}
+
+.width-50{
+  width: 50%;
+}
+.px-5{
+  padding: 0 34px;
+}
 @media screen and (min-width: 481px) and (max-width: 768px) {
   
   .coverPhone {

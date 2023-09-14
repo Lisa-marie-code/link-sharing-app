@@ -1,21 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
 import "./linknew.css";
 import { Platform } from "../Platforms/platform";
 import { AiOutlinePlus } from "react-icons/ai";
 import { Started } from "../Started/started";
 
-export const Linknew = () => {
-  const [showPlatforms, setShowPlatforms] = useState([]);
-
-
+export const Linknew = ({showPlatforms,setShowPlatforms}) => {
+  
   const showLink = () => {
-    setShowPlatforms([ ...showPlatforms,<Platform key={showPlatforms.length} />]);
+    setShowPlatforms([ ...showPlatforms,{platform: "Github",link:""}]);
     
   };
 
   const handleRemovePlatform = (index) => {
     setShowPlatforms((prevItems) => prevItems.filter((item, i) => i !== index));
   };
+
+  function setInputValue(index,value,type) {
+    const data = [...showPlatforms];
+    data[index][type] = value;
+    setShowPlatforms(data);
+  }
 
   return (
     <div>
@@ -24,8 +28,10 @@ export const Linknew = () => {
         Add new link
       </button>
       {showPlatforms.map((showPlatform, index) => (
-        <div key={index} className="platform-new-link">
+        <div key={showPlatform.link} className="platform-new-link">
           <Platform
+            setInputValue={setInputValue}
+            data={showPlatform}
             index={index}
             onRemove={() => handleRemovePlatform(index)}
           />
@@ -36,4 +42,4 @@ export const Linknew = () => {
   );
 };
 
-export default Linknew;
+export default React.memo(Linknew);

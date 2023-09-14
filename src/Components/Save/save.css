@@ -1,6 +1,7 @@
 .save-button {
   padding: 11px 27px;
   border: none;
+  cursor: pointer;
   color: var(--header-background);
   background-color: var(--link-color);
   border-radius: 8px;

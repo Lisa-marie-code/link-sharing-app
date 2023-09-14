@@ -1,21 +1,19 @@
 .content_div {
   width: 237px;
   background-color: var(--link-border);
-  position: absolute;
+}
 
+.pb-20 {
+  margin-bottom: 20px;
 }
 .content_div * {
   background-color: var(--link-border);
 }
 section {
-  background-color: blue;
   width: 150px;
-  /* margin: 15px 0 0 160px; */
-  /* z-index: 1; */
   border-radius: 10px;
-  padding: 11px 64px;
+  padding: 12px 40px;
   display: flex;
   text-align: center;
-  flex-direction: row;
   justify-content: space-between;
 }

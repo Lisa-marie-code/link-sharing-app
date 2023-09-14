@@ -1,19 +1,22 @@
-import React,{useContext} from "react";
+import React from "react";
 import './phone.css';
-import {Content} from "../Content/content"
-import { SaveContext } from "../../Components/Save/savecontext";
+import { Content } from "../Content/content";
 
-
-export const Phone = (props) => {
-
-
-  const { selectedPlatform } = useContext(SaveContext);
-  
+export const Phone = ({ showPlatforms, img }) => {
   return (
     <div className="coverPhone">
-         <Content selectedPlatform={selectedPlatform}/>
-      <img className="phone_img" src={props.img} alt="logo" />
-   
+      <div className="position-relative">
+        <img className="phone_img" src={img} alt="logo" />
+        <div className="position-absolute top-20 px-5 background-color">
+          {showPlatforms ? (
+            showPlatforms.map((value) => (
+              <Content key={value.link} value={value} />
+            ))
+          ) : (
+            <p>{""}</p>
+          )}
+        </div>
+      </div>
     </div>
   );
 };
